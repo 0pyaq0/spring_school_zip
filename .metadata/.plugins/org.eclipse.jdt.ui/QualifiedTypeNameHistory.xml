@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.HelloWorldEn"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.HelloWorldKr"/>
+    <fullyQualifiedTypeName name="org.w3c.dom.html.HTMLParagraphElement"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.HelloWorld"/>
+</qualifiedTypeNameHistroy>
