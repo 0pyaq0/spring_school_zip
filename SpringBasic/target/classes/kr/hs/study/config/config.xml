@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> <!-- 객체 생성 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -10,6 +10,6 @@
 	                    http://www.springframework.org/schema/aop
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 	                    
-    <!-- TestBean t = new TestBean() -->
-    <bean id = "test1" class = "kr.hs.study.beans.TestBean"/>
+    <!-- TestBean t = new TestBean() TestBean 객체 생성 -->
+    <bean id = "t1" class = "kr.hs.study.beans.TestBean"/>
 </beans>
