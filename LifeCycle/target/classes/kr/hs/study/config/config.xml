@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd"
+	                    default-init-method="init"> <!-- 모든 객체들이 메소드 실행을 받고 싶게 만든다면 여기에 둔다. -->
+	                    
+    <bean id = "d1" class = "kr.hs.study.beans.DataBean1" init-method="init" destroy-method="destroy"/>
+    <bean id = "d2" class = "kr.hs.study.beans.DataBean1" lazy-init="true"/>
+    <bean id = "d3" class = "kr.hs.study.beans.DataBean1" scope="prototype"/>
+</beans>
