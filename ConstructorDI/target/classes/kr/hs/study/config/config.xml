@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+	                    
+    <!--<bean id = "t1" class = "kr.hs.study.beans.TestBean"/>
+    <bean id = "t2" class = "kr.hs.study.beans.TestBean">
+    	<constructor-arg value="10" type="int"/>   value 값 형에 따라 들어있는 생성자를 찾아서 자동으로 값을 넣어준다
+    </bean>
+    <bean id = "t3" class = "kr.hs.study.beans.TestBean">
+    	<constructor-arg value="22.22" type="double"/> 	
+    </bean>
+    <bean id = "t4" class = "kr.hs.study.beans.TestBean">
+    	<constructor-arg value="spring3" type="java.lang.String"/>
+    </bean> -->
+    
+    <bean id = "t5" class = "kr.hs.study.beans.TestBean">
+    	<constructor-arg value="50" type="int" index="0"/>
+    	<constructor-arg value="55.55" type="double" index="1"/>
+    	<constructor-arg value="spring5" type="java.lang.String" index="2"/>
+    </bean> 
+    
+    
+    
+   <!-- 1번 -->
+   <bean id = "t6" class="kr.hs.study.beans.TestBean2">
+   		<constructor-arg>
+   			<bean class="kr.hs.study.beans.DataBean"/>
+   		</constructor-arg>
+   		<constructor-arg>
+   			<bean class="kr.hs.study.beans.DataBean"/>
+   		</constructor-arg>
+   </bean>
+   
+   
+    <!-- 2번 -->
+   <bean id = "d1" class="kr.hs.study.beans.DataBean"/>
+   <bean id = "t7" class="kr.hs.study.beans.TestBean2" scope="prototype">
+   		<constructor-arg ref = "d1"/>
+   		<constructor-arg ref = "d1"/>
+   </bean>
+    
+</beans>
