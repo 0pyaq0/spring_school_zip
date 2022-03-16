@@ -4,10 +4,10 @@
     <fullyQualifiedTypeName name="kr.hs.study.beans.HelloWorldEn"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.HelloWorld"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.HelloWorldKr"/>
-    <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean1"/>
-    <fullyQualifiedTypeName name="kr.hs.study.beans.DataBean1"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.DataBean"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean2"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.DataBean1"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean1"/>
 </qualifiedTypeNameHistroy>
