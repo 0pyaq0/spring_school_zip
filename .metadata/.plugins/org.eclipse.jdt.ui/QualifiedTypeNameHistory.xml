@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="kr.hs.study.beans.DataBean1"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.DataBean3"/>
     <fullyQualifiedTypeName name="java.lang.Class"/>
-    <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean3"/>
     <fullyQualifiedTypeName name="kr.hs.study.config.BeanClassConfiguration"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.Employee"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.Designer"/>
@@ -21,11 +20,14 @@
     <fullyQualifiedTypeName name="kr.hs.study.beans.novel"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.poet"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.magazine"/>
+    <fullyQualifiedTypeName name="kr.hs.study.config.BeanConfigClass"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean1"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
-    <fullyQualifiedTypeName name="kr.hs.study.config.BeanConfigClass"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
-    <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean1"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Lazy"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Scope"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean3"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.DataBean4"/>
+    <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean4"/>
 </qualifiedTypeNameHistroy>
