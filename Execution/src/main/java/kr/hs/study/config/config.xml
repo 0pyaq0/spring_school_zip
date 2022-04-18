@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+	                    
+    <bean id = "advisor" class = "kr.hs.study.advisor.AdvisorClass"/>
+    <bean id = "t1" class = "kr.hs.study.beans.TestBean1"/>
+    <aop:config>
+    	<aop:aspect ref = "advisor">
+    		<!-- <aop:pointcut id="point" expression="execution(void kr.hs.study.beans.TestBean1.method1())" /> 
+    		     리턴 타입이 void, 관심메서드가 kr.hs.study.beans.TestBean1.method1() 다. -->
+    		     <!-- <aop:pointcut id="point" expression="execution(void kr.hs.study.beans.TestBean1.method1(int))" />
+    		           리턴 타입이 void, 관심메서드가 kr.hs.study.beans.TestBean1.method1(int)) 다.  -->
+    		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.method1(java.lang.String))" id="point"/> -->
+    		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(*))" id="point"/> 
+    		모든 타입의 TestBean1의 method1-->
+    		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(int, int))" id="point"/> 
+    		      리턴 타입이 void,  kr.hs.study.beans 패키지의 TestBean1 클래스의 정수형 매개변수 2개 -->
+    		<aop:before method="beforeMethod" pointcut-ref="point"/>
+    	</aop:aspect>
+    </aop:config>
+</beans>
