@@ -19,7 +19,12 @@
     		
     		<!-- <aop:before method="beforeMethod" pointcut-ref="point"/> -->
     		<!-- method1()이 실행되기 전에 beforeMethod가 먼저 실행된다. -->
-    		<aop:after method="AfterMethod" pointcut-ref="point"/>
+    		
+    		<!-- <aop:after method="AfterMethod" pointcut-ref="point"/> -->
+    		
+    		<!-- <aop:around method="aroundmethod" pointcut-ref="point"/>-->
+    		<!--  <aop:after-returning method="afterReturningMethod" pointcut-ref="point"/> -->
+    		<aop:after-throwing method="afterThrowableMethod" pointcut-ref="point" throwing="e"/>
     	</aop:aspect>
     </aop:config>
 </beans>
