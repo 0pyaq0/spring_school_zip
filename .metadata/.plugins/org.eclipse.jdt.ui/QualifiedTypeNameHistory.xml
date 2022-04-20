@@ -40,6 +40,8 @@
     <fullyQualifiedTypeName name="kr.hs.study.beans.Publisher"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.Developer"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.Designer"/>
+    <fullyQualifiedTypeName name="org.aspectj.lang.ProceedingJoinPoint"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
     <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="kr.hs.study.beans.TestBean1"/>
 </qualifiedTypeNameHistroy>

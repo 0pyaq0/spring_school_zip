@@ -16,13 +16,49 @@
     	<aop:aspect ref = "advisor">
     		<!-- <aop:pointcut id="point" expression="execution(void kr.hs.study.beans.TestBean1.method1())" /> 
     		     리턴 타입이 void, 관심메서드가 kr.hs.study.beans.TestBean1.method1() 다. -->
-    		     <!-- <aop:pointcut id="point" expression="execution(void kr.hs.study.beans.TestBean1.method1(int))" />
-    		           리턴 타입이 void, 관심메서드가 kr.hs.study.beans.TestBean1.method1(int)) 다.  -->
+    		     
+    		<!-- <aop:pointcut id="point" expression="execution(void kr.hs.study.beans.TestBean1.method1(int))" />
+    		     리턴 타입이 void, 관심메서드가 kr.hs.study.beans.TestBean1.method1(int)) 다. -->
+    		     
     		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.method1(java.lang.String))" id="point"/> -->
-    		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(*))" id="point"/> 
-    		모든 타입의 TestBean1의 method1-->
+    		
+    		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(*))" id="point"/> 모든 타입의 TestBean1의 method1-->
+    		
     		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(int, int))" id="point"/> 
     		      리턴 타입이 void,  kr.hs.study.beans 패키지의 TestBean1 클래스의 정수형 매개변수 2개 -->
+    		      
+    		 <!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(int, java.lang.String))" id="point"/> 
+    		       리턴 타입이 void,  kr.hs.study.beans 패키지의 TestBean1 클래스의 정수형 매개변수 1개, 문자열 배개변수 1개 -->
+    		       
+    		       
+    		 <!--      리턴 타입이 void,  kr.hs.study.beans 패키지의 TestBean1 클래스의 모든 타입의 매개변수 2개 이상 
+    		 <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(*, *))" id="point"/> -->
+    		 
+    		 <!--       리턴 타입이 void,  kr.hs.study.beans 패키지의 TestBean1 클래스의 모든 타입의 매개변수 0개 이상 
+    		 <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.mathod1(..))" id="point"/> -->
+    		 
+    		   <!--     리턴 타입이 void,  kr.hs.study.beans 패키지의 TestBean1 클래스의 모든 method
+    		 <aop:pointcut expression="execution((void kr.hs.study.beans.TestBean1.*(..))" id="point"/>--> 
+    		 
+    		 <!--      리턴 타입이 void,  kr.hs.study.beans 패키지의 모든 클래스의 모든 method1
+    		 <aop:pointcut expression="execution(void kr.hs.study.beans.*.method1(..))" id="point"/> --> 
+    		 
+    		 <!--       리턴 타입이 void,  kr.hs.study.beans 패키지의 모든 클래스의 모든 메서드
+    		 <aop:pointcut expression="execution(void kr.hs.study.beans.*.*(..))" id="point"/> -->
+    		 
+    		 
+    		 <!--       리턴 타입이 void,  kr.hs.study 모든 패키지의 모든 클래스의 모든 메서드
+    		 <aop:pointcut expression="execution(void kr.hs.study.*.*.*(..))" id="point"/>-->
+    		 
+    		  <!--       리턴 타입이 void, 모든 패키지, 모든 클래스, 모든 메서드
+    		 <aop:pointcut expression="execution(void *.*(..))" id="point"/> -->
+    		 
+    		 <!--       리턴 타입이 int, 모든 패키지, 모든 클래스, 모든 메서드-->
+    		 <aop:pointcut expression="execution(int *.*(..))" id="point"/>
+    		 
+    		 <!--       모든 리턴 타입, 모든 패키지, 모든 클래스, 모든 메서드
+    		 <aop:pointcut expression="execution(* *.*(..))" id="point"/>-->
+    		 
     		<aop:before method="beforeMethod" pointcut-ref="point"/>
     	</aop:aspect>
     </aop:config>

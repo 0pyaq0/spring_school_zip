@@ -15,6 +15,8 @@ public class MainClass {
 		t1.method1(100);
 		t1.method1("심이진");
 		t1.method1(100, 50);
+		t1.method1(10, "심이진");
+		t1.method1(10, 10, 10);
 		
 		ctx.close();
 	}
