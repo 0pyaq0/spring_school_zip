@@ -1,5 +1,7 @@
 package kr.hs.study.main;
 
+import java.util.List;
+
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import kr.hs.study.beans.TestBean;
@@ -13,8 +15,8 @@ public class MainClass {
 		
 		//1. dao 가지고 오기
 		TestDAO dao = anno.getBean(TestDAO.class);
-		
-		/*//2. TestBean 객체 t1 만들어서 10, Spring 넣기
+		/*
+		//2. TestBean 객체 t1 만들어서 10, Spring 넣기
 		TestBean t1 = anno.getBean(TestBean.class);
 		t1.setData1(10);
 		t1.setData2("spring");
@@ -41,13 +43,18 @@ public class MainClass {
 				
 		System.out.println("update!!");*/
 		
-		// delete
-		TestBean t4 = new TestBean();	
+		/*// delete
 		dao.delete_data(10);
 				
-		System.out.println("delete!!");
+		System.out.println("delete!!");*/
 		
+		// select
+		List<TestBean> list = dao.select_data();
 		
+		for(TestBean bean : list) {
+			System.out.println(bean.getData1());
+			System.out.println(bean.getData2());
+		}
 		
 		anno.close();
 	}

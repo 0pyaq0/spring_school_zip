@@ -1,5 +1,7 @@
 package kr.hs.study.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
@@ -11,6 +13,10 @@ public class TestDAO {
 	// jdbc template을 자동주입, 실제 쿼리를 알려준다.
 	@Autowired
 	private JdbcTemplate db; 
+	
+	@Autowired
+	MapperClass mapperClass; 
+	// container에 있는 MapperClass bean을 찾아서 mapper에 주입
 	
 	
 	//실제 쿼리 작성
@@ -38,4 +44,10 @@ public class TestDAO {
 			db.update(sql, data1);
 		}
 	
+	// 4. select
+	public List<TestBean> select_data() {
+		String sql = "select * from test";
+		List<TestBean> list = db.query(sql, mapperClass);
+		return list;
+	}
 }
