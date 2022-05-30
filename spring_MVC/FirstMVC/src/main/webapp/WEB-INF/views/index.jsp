@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>hi Spring MVC~</h1>
-<img src="img/1.svg"/>
+<img src="webapp/resources/img/1.svg"/>
 </body>
 </html>
