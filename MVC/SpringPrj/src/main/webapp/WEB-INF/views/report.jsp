@@ -5,11 +5,13 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/underline.css">
 </head>
 <body>
-<a href="sum">1부터 10까지의 합</a>
-<a href="multi_table">구구단</a>
-<a href="grade">성적 구하기</a>
+<h2>이름 : ${dto.name}</h2> <br/>
+<h2>국어 : ${dto.kor}</h2> <br/>
+<h2>영어 : ${dto.eng}</h2> <br/>
+<h2>수학 : ${dto.math}</h2> <br/>
+<h2>총점 : ${dto.grsum}</h2> <br/>
+<h2>평균 : ${dto.gravg}</h2>
 </body>
 </html>
