@@ -18,6 +18,19 @@
 		<beans:property name="suffix" value=".jsp"/>
 	</beans:bean>
 <resources mapping="/**" location="/resources/"/> 
+
+<!-- 파일 업로드 -->
+<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+<!-- 파일 용량 -->
+<beans:property name="maxUploadSize" value="100000000"/>
+</beans:bean>
+
+<!-- 파일 업로드 디렉토리 -->
+<beans:bean id="uploadPath" class="java.lang.String">
+<beans:constructor-arg value="C:\\spring_core\\MVC\\upload"/>
+</beans:bean>
+
 </beans:beans>
 
 
