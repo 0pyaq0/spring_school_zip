@@ -7,4 +7,8 @@
  <insert id="insert_data" parameterType="kr.hs.study.model.Databean">
  insert into test values(#{data1}, #{data2})
  </insert>
+ 
+  <select id="select_data" resultType="kr.hs.study.model.Databean">
+  select * from test
+ </select>
 </mapper>       

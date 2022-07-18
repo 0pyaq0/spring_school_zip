@@ -11,5 +11,7 @@
 <img src="img/1.svg"/><hr>
 <a href="input_data">input_data</a><br/>
 <a href="read_data">read_data</a><br/>
+<a href="update_data">update_data</a><br/>
+<a href="delete_data">delete_data</a><br/>
 </body>
 </html>
