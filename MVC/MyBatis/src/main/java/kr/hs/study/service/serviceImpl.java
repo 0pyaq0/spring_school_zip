@@ -22,4 +22,8 @@ public class serviceImpl implements serviceInterface {
 		return dao.select();
 	}
 
+	public void update(Databean dto) {
+		dao.update(dto);
+	}
+
 }

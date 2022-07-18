@@ -11,4 +11,8 @@
   <select id="select_data" resultType="kr.hs.study.model.Databean">
   select * from test
  </select>
+ 
+ <update id="update_data" parameterType="kr.hs.study.model.Databean">
+ update test set data1 = #{data1} , data2 = #{data2}
+ </update>
 </mapper>       

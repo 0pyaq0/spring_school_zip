@@ -22,7 +22,12 @@ public class DaoImpl implements DaoInterface{
 	
 	public List<Databean> select() {
 		return sqlSession.selectList("test.select_data");
-		
 	}
+
+	public void update(Databean dto) {
+		sqlSession.update("test.update_data", dto);
+	}
+	
+	
 	
 }

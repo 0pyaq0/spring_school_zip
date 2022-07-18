@@ -19,7 +19,7 @@ public class TestController {
 	@Autowired
 	private serviceInterface service;
 	
-	@GetMapping("input_data")
+	@GetMapping("/input_data")
 	public String input() {
 		return "input";
 	}
@@ -31,9 +31,20 @@ public class TestController {
 		return "result2";
 	}
 	
+	@GetMapping("/update_data")
+	public String update() {
+		return "update";
+	}
+	
 	@PostMapping("/re_input")
 	public String re_input(Databean bean) { // ModelAttribute 사용, 생략가능.
 		service.insert(bean);
+		return "result";
+	}
+	
+	@PostMapping("/re_update")
+	public String re_update(Databean bean) {
+		service.update(bean);
 		return "result";
 	}
 	
