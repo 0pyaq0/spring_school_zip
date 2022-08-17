@@ -12,7 +12,8 @@
 
 
 	<!-- <bean id="d1" class="kr.hs.study.beans.DataBean1" lazy-init="true" />
-	<bean id="t1" class="kr.hs.study.beans.TestBean1">
+	<bean id="t1" class="k
+	r.hs.study.beans.TestBean1">
 		<property name="data1" ref="d1" />
 		<property name="data2" ref="d1" />
 	</bean>
