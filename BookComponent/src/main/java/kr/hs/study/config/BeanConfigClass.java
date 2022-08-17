@@ -13,7 +13,7 @@ public class BeanConfigClass {
 	public BookInfo noInfo() {
 		return new BookInfo("Kim", "spring", 8000);
 	}
-	
+
 	@Bean
 	public BookInfo poInfo() {
 		return new BookInfo("Lee", "spring2", 10000);
