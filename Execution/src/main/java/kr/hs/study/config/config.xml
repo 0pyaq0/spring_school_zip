@@ -60,6 +60,61 @@
     		 <aop:pointcut expression="execution(* *.*(..))" id="point"/>-->
     		 
     		<aop:before method="beforeMethod" pointcut-ref="point"/>
+    		
+    		<!-- <aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.method1(int, int))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study.beans.TestBean1 클래스의 int 매개변수 두개를 가진 method1() 메서드가 관심 메서드  
+	                    		-->
+
+	                    		<!-- 
+	                    		<aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.method1(int, java.lang.String))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study.beans.TestBean1 클래스의 int형 1개, String형 1개 매개변수를 가진 method1() 메서드가 관심 메서드  
+	                    		-->
+
+	                    		<!-- 
+	                    		<aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.method1(*, *))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study.beans.TestBean1 클래스의 모든 타입의 매개변수 2개를 가진 method1() 메서드가 관심 메서드  
+	                    		-->
+
+	                    		<!-- 
+	                    		<aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.method1(..))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study.beans.TestBean1 클래스의 모든 타입의 매개변수 0개 이상을 가진 method1() 메서드가 관심 메서드  
+	                    		-->
+
+
+	                    		<!--  
+	                    		<aop:pointcut expression="execution(void kr.hs.study.beans.TestBean1.*(..))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study.beans 패키지의 TestBean1 클래스의 모든 메서드
+	                    		-->
+
+	                    		<!--
+	                    		<aop:pointcut expression="execution(void kr.hs.study.beans.*.method1(..))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study.beans 패키지의 TestBean1 클래스의 method1
+	                    		-->
+
+	                    		<!--
+	                    		<aop:pointcut expression="execution(void kr.hs.study.beans.*.*(..))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study.beans 패키지의 모든 클래스의 method1
+	                    		-->
+
+	                    		<!--
+	                    		<aop:pointcut expression="execution(void kr.hs.study.*.*.*(..))" id="point"/>
+	                    		리턴 타입이 void고 kr.hs.study의 모든 패키지의 모든 클래스, 모든 메서드
+	                    		-->
+
+	                    		<!--
+	                    		<aop:pointcut expression="execution(void *(..))" id="point"/>
+	                    		리턴 타입이 void고 모든 패키지의 모든 클래스, 모든 메서드
+	                    		-->
+
+	                    		<!--
+	                    		<aop:pointcut expression="execution(int *(..))" id="point"/>
+	                    		리턴 타입이 int고 모든 패키지의 모든 클래스, 모든 메서드
+	                    		-->
+
+	                    		<aop:pointcut expression="execution(* *(..))" id="point"/>
+	                    		<!-- 모든 리턴 타입의 모든 패키지의 모든 클래스, 모든 메서드 -->
+
+	                    		<aop:before method="beforeMethod" pointcut-ref="point"/>
     	</aop:aspect>
     </aop:config>
 </beans>
