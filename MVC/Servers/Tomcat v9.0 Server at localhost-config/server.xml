@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="SpringPrj" path="/SpringPrj" reloadable="true" source="org.eclipse.jst.jee.server:SpringPrj"/><Context docBase="ViewResolver" path="/ViewResolver" reloadable="true" source="org.eclipse.jst.jee.server:ViewResolver"/><Context docBase="ViewResolver2" path="/ViewResolver2" reloadable="true" source="org.eclipse.jst.jee.server:ViewResolver2"/><Context docBase="CommandObj" path="/CommandObj" reloadable="true" source="org.eclipse.jst.jee.server:CommandObj"/></Host>
+      <Context docBase="SpringPrj" path="/SpringPrj" reloadable="true" source="org.eclipse.jst.jee.server:SpringPrj"/><Context docBase="ViewResolver" path="/ViewResolver" reloadable="true" source="org.eclipse.jst.jee.server:ViewResolver"/><Context docBase="ViewResolver2" path="/ViewResolver2" reloadable="true" source="org.eclipse.jst.jee.server:ViewResolver2"/><Context docBase="CommandObj" path="/CommandObj" reloadable="true" source="org.eclipse.jst.jee.server:CommandObj"/><Context docBase="MyBatis" path="/MyBatis" reloadable="true" source="org.eclipse.jst.jee.server:MyBatis"/></Host>
     </Engine>
   </Service>
 </Server>

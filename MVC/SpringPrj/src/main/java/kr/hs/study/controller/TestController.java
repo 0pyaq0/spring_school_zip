@@ -22,12 +22,12 @@ public class TestController {
 			result += i;
 		}
 		model.addAttribute("sum", result);
-		return "sum";
+		return "member/sum";
 	}
 	
 	@GetMapping("/multi_table")
 	public String multiTable() {
-		return "multi_table";
+		return "member/multi_table";
 	}
 	
 	@GetMapping("/multi")
@@ -35,12 +35,12 @@ public class TestController {
 		for(int i=1; i<=9; i++) {
 			System.out.println(i + " * " + number + " = " + (i*number));
 		}
-		return "result";
+		return "member/result";
 	}
 	
 	@GetMapping("/grade")
 	public String grade() {
-		return "grade";
+		return "member/grade";
 	}
 	
 	@GetMapping("/report")
@@ -49,6 +49,18 @@ public class TestController {
 		bean.setGravg((bean.getKor()+bean.getEng()+bean.getMath())/3);
 		
 		model.addAttribute("dto", bean);
-		return "report";
+		return "member/report";
+	}
+	
+	@GetMapping("/register")
+	public String register() {
+		return "member/register";
+		
+	}
+	
+	@GetMapping("/join")
+	public String join(Model model, DataBean bean) {
+		model.addAttribute("dto", bean);
+		return "member/join";
 	}
 }
