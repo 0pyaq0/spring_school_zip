@@ -13,25 +13,27 @@ public class MainClass {
 		
 		TestDAO dao = anno.getBean(TestDAO.class);
 		
-		TestBean t1 = anno.getBean(TestBean.class);
+		 TestBean t1 = anno.getBean(TestBean.class);
 		t1.setUserid("kim");
-		t1.setUserpassword("1111");
+		t1.setUserpassword(1111);
 		
 		dao.insert_data(t1);
 		
 		TestBean t2 = anno.getBean(TestBean.class);
 		t2.setUserid("Lee");
-		t2.setUserpassword("2222");
+		t2.setUserpassword(2222);
 		
 		dao.insert_data(t2);
 		
 		TestBean t3 = anno.getBean(TestBean.class);
 		t3.setUserid("Park");
-		t3.setUserpassword("3333");
+		t3.setUserpassword(3333);
 		
 		dao.insert_data(t3);
 		
 		System.out.println("insert!!");
+		
+		
 		
 		anno.close();
 	}

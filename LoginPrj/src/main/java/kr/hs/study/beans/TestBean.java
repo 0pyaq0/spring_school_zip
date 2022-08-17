@@ -7,17 +7,17 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class TestBean {
 	private String userid;
-	private String userpassword;
+	private int userpassword;
 	public String getUserid() {
 		return userid;
 	}
 	public void setUserid(String userid) {
 		this.userid = userid;
 	}
-	public String getUserpassword() {
+	public int getUserpassword() {
 		return userpassword;
 	}
-	public void setUserpassword(String userpassword) {
+	public void setUserpassword(int userpassword) {
 		this.userpassword = userpassword;
 	}
 	
