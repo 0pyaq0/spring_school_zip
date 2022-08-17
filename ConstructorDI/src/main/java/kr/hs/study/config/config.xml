@@ -41,8 +41,8 @@
    
    
     <!-- 2번 -->
-   <bean id = "d1" class="kr.hs.study.beans.DataBean"/>
-   <bean id = "t7" class="kr.hs.study.beans.TestBean2" scope="prototype">
+   <bean id = "d1" class="kr.hs.study.beans.DataBean" scope="prototype"/>
+   <bean id = "t7" class="kr.hs.study.beans.TestBean2" >
    		<constructor-arg ref = "d1"/>
    		<constructor-arg ref = "d1"/>
    </bean>
