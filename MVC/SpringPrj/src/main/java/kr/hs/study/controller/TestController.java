@@ -2,6 +2,7 @@ package kr.hs.study.controller;
 
 import java.util.Scanner;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,9 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.hs.study.dto.DataBean;
+import kr.hs.study.dto.memberDTO;
+import kr.hs.study.service.memberInterface;
 
 @Controller
 public class TestController {
+	@Autowired
+	private memberInterface memberService;
 	
 	@GetMapping("/sum")
 	public String sum(Model model) {
@@ -53,8 +58,8 @@ public class TestController {
 	}
 	
 	@GetMapping("/register")
-	public String register() {
-		return "member/register";
+	public String login_form() {
+		return "member/login_form";
 		
 	}
 	
@@ -62,5 +67,11 @@ public class TestController {
 	public String join(Model model, DataBean bean) {
 		model.addAttribute("dto", bean);
 		return "member/join";
+	}
+	
+	@PostMapping("/register")
+	public String register(memberDTO dto) {
+		memberService.insert(dto);
+		return "member/result";
 	}
 }

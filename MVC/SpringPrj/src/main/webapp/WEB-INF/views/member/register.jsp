@@ -7,11 +7,6 @@
 <title>회원가입/로그인</title>
 </head>
 <body>
-<form method="post" action="join">
-id : <input type="text" name="userid"/><br/>
-pw : <input type="password" name="upw"/><br/>
-name : <input type="text" name="uname"/><br/>
-email : <input type="text" name="uemail"/><br/><br/>
-<button type="submit">Join us</button></form>
+<h1>Result!!!!</h1>
 </body>
 </html>

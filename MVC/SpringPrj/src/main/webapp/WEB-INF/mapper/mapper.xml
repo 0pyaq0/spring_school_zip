@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="member">
+ <insert id="insert_data" parameterType="kr.hs.study.dto.memberDTO">
+ insert into tbl_member(userid, upw, uname, uemail) values(#{userid}, #{upw}, #{uname}, #{uemail})
+ </insert>
+ 
+  <select id="select_data" resultType="kr.hs.study.model.Databean">
+  select * from test
+ </select>
+ 
+ <update id="update_data" parameterType="kr.hs.study.model.Databean">
+ update test set data1 = #{data1} , data2 = #{data2}
+ </update>
+</mapper>       
