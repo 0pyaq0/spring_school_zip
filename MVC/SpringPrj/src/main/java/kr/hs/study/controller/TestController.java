@@ -63,12 +63,6 @@ public class TestController {
 		
 	}
 	
-	@GetMapping("/join")
-	public String join(Model model, DataBean bean) {
-		model.addAttribute("dto", bean);
-		return "member/join";
-	}
-	
 	@PostMapping("/register")
 	public String register(memberDTO dto) {
 		memberService.insert(dto);

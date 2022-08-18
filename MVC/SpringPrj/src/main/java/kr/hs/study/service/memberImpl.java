@@ -1,10 +1,12 @@
 package kr.hs.study.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import kr.hs.study.dao.memberDAO;
 import kr.hs.study.dto.memberDTO;
 
+@Service
 public class memberImpl implements memberInterface {
 	
 	@Autowired

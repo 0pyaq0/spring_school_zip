@@ -8,11 +8,11 @@
  insert into tbl_member(userid, upw, uname, uemail) values(#{userid}, #{upw}, #{uname}, #{uemail})
  </insert>
  
-  <select id="select_data" resultType="kr.hs.study.model.Databean">
-  select * from test
+  <select id="select_data" resultType="kr.hs.study.dto.memberDTO">
+  select * from tbl_member
  </select>
  
- <update id="update_data" parameterType="kr.hs.study.model.Databean">
- update test set data1 = #{data1} , data2 = #{data2}
+ <update id="update_data" parameterType="kr.hs.study.dto.memberDTO">
+ update tbl_member set userid = #{userid} , upw = #{upw}, uname = #{uname}, uemail = #{uemail}
  </update>
 </mapper>       
