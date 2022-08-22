@@ -1,5 +1,7 @@
 package kr.hs.study.service;
 
+import java.util.List;
+
 import kr.hs.study.dto.memberDTO;
 
 public interface memberInterface {
@@ -7,5 +9,5 @@ public interface memberInterface {
 	public void insert(memberDTO dto);
 	public void update(memberDTO dto);
 	public void delete(memberDTO dto);
-	public void select(memberDTO dto);
+	public List<memberDTO> select();
 }

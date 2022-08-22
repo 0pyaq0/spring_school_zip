@@ -1,5 +1,7 @@
 package kr.hs.study.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -26,9 +28,9 @@ public class memberDAOImpl implements memberDAO {
 
 	}
 
-	public void select(memberDTO dto) {
-		// TODO Auto-generated method stub
-
+	public List<memberDTO> select() {
+		return sqlSession.selectList("member.select_data");
+		
 	}
 
 }

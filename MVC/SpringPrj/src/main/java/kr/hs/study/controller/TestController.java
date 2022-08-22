@@ -1,5 +1,6 @@
 package kr.hs.study.controller;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,5 +68,12 @@ public class TestController {
 	public String register(memberDTO dto) {
 		memberService.insert(dto);
 		return "member/result";
+	}
+	
+	@GetMapping("/select")
+	public String select(Model model) {
+		List<memberDTO> list = memberService.select();
+		model.addAttribute("list", list);
+		return "member/select";
 	}
 }

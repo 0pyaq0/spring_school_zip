@@ -13,5 +13,7 @@ pw : <input type="password" name="upw"/><br/>
 name : <input type="text" name="uname"/><br/>
 email : <input type="text" name="uemail"/><br/><br/>
 <button type="submit">Join us</button></form>
+<br/><br/>
+<a href=select>select</a>
 </body>
 </html>

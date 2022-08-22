@@ -1,5 +1,7 @@
 package kr.hs.study.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,9 +28,8 @@ public class memberImpl implements memberInterface {
 
 	}
 
-	public void select(memberDTO dto) {
-		// TODO Auto-generated method stub
-
+	public List<memberDTO> select (){
+		return dao.select();
 	}
 
 }
