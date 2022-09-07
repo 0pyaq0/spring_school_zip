@@ -13,6 +13,7 @@
 <a href="score">성적구하기</a> | 
 <a href="login">로그인</a> | 
 <a href="upload">파일업로드|</a>
-<a href="register">회원가입 로그인</a>
+<a href="register">회원가입 로그인</a> |
+<a href="bbs">게시판</a>
 </body>
 </html>

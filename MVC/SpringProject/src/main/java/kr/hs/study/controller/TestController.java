@@ -11,12 +11,52 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.hs.study.dto.memberDTO;
+import kr.hs.study.dto.scoreDTO;
 import kr.hs.study.service.memberService;
 
 @Controller
 public class TestController {
 	@Autowired
 	private memberService memberservice;
+	
+	@GetMapping("/sum")
+	public String sum(Model model) {
+		int result = 0;
+		for(int i=1; i<=10; i++) {
+			result += i;
+		}
+		model.addAttribute("sum", result);
+		return "sum";
+	}
+	
+	@GetMapping("/multi_table")
+	public String multiTable() {
+		return "multi_table";
+	}
+	
+	@GetMapping("/multi")
+	public String multi(@RequestParam int number, Model model) {
+		String result = "";
+		for(int i=1; i<=9; i++) {
+			result += number + " * " + i + " = " + (i*number) + "<br>";
+		}
+		model.addAttribute("result", result);
+		return "result";
+	}
+	
+	@GetMapping("/score")
+	public String score() {
+		return "score";
+	}
+	
+	@GetMapping("/score_result")
+	public String report(Model model, scoreDTO bean) {
+		bean.setGrsum(bean.getKor()+bean.getEng()+bean.getMath());
+		bean.setGravg((bean.getKor()+bean.getEng()+bean.getMath())/3);
+		
+		model.addAttribute("dto", bean);
+		return "score_result";
+	}
 	
 	@GetMapping("/register")
 	public String login_form() {
@@ -52,6 +92,18 @@ public class TestController {
 	public String delete(@RequestParam String userid) {
 		memberservice.delete(userid);
 		return "redirect:/member";
+	}
+	
+	
+	
+	@GetMapping("/bbs")
+	public String bbs() {
+		return "bbs";
+	}
+	
+	@GetMapping("/write")
+	public String write() {
+		return "write_form";
 	}
 	
 }
