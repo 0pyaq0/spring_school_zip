@@ -94,18 +94,6 @@ public class TestController {
 		return "redirect:/member";
 	}
 	
-	
-	
-	@GetMapping("/bbs")
-	public String bbs() {
-		return "bbs";
-	}
-	
-	@GetMapping("/write")
-	public String write() {
-		return "write_form";
-	}
-	
 }
 
 

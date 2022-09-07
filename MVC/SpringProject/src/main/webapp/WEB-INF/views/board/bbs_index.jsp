@@ -7,8 +7,8 @@
 <title>°Ô½ÃÆÇ</title>
 </head>
 <body>
-welcome BBS~!
-
-<a href="write">write</a> <br/><br/>
+<h1>welcome BBS~!</h1>
+<br/><br/>
+<a href="write">write</a>
 </body>
 </html>
