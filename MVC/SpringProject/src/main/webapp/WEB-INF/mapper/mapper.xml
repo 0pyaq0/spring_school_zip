@@ -19,4 +19,5 @@
  	<delete id="delete_data" parameterType="kr.hs.study.dto.memberDTO">
  	delete from tbl_member where userid=#{userid}
  	</delete>
- </mapper>       
+ </mapper>      
+ 

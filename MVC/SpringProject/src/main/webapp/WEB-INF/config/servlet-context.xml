@@ -12,11 +12,10 @@
 	
 <annotation-driven/>	
 
-<context:component-scan base-package="kr.hs.study.controller" />
-<context:component-scan base-package="kr.hs.study.dto" />	
-<context:component-scan base-package="kr.hs.study.dao" />	
-<context:component-scan base-package="kr.hs.study.service" />	
-	
+<context:component-scan base-package="kr.hs.study.controller" />	
+<context:component-scan base-package="kr.hs.study.dao" />
+<context:component-scan base-package="kr.hs.study.dto" />
+<context:component-scan base-package="kr.hs.study.service" />
 	 
 <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/"/>

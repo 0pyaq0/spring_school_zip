@@ -7,13 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" action="write_form">
-		이름 : <input type="text" name="idx" /> <br>
-		비밀번호 : <input type="text" name="password" /> <br>
-		제목 : <input type="text" name="title" /> <br>
-		글쓴이 : <input type="text" name="writer" /> <br>
-		이메일 : <input type="text" name="email" /> <br>
-		내용 : <input type="text" name="content" /> <br>
+<h1>Board Login</h1>
+<form method="post" action="board_register">
+		제목 : <input type="text" name="title" /> <br><br>
+		비밀번호 : <input type="text" name="password" /> <br><br>
+		글쓴이 : <input type="text" name="writer" /> <br><br>
+		이메일 : <input type="text" name="email" /> <br><br>
+		내용 : <textarea name="content" rows="20"></textarea> <br><br>
 		<button type="submit">작성완료</button>
 	</form>
 </body>

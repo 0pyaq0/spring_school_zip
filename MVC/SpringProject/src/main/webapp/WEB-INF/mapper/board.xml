@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="board_mapper_xml">
+ 	<insert id="insert_board" parameterType="kr.hs.study.dto.boardDTO">
+ 	   insert into tbl_bbs(idx,title,password,writer,content,email,hit) 
+ 	   values((select NVL(max(idx)+1,1) from tbl_bbs), #{title},#{password},#{writer},#{content},#{email},1)
+ 	</insert>
+ 	
+ </mapper>      
+ 
