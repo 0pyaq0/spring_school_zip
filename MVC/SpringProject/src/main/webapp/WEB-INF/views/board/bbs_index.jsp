@@ -9,6 +9,7 @@
 <body>
 <h1>welcome BBS~!</h1>
 <br/><br/>
-<a href="write">write</a>
+<a href="write">write</a> | 
+<a href="select">list</a>
 </body>
 </html>

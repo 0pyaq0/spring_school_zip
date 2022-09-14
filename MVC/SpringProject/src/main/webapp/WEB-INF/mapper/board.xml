@@ -8,6 +8,11 @@
  	   insert into tbl_bbs(idx,title,password,writer,content,email,hit) 
  	   values((select NVL(max(idx)+1,1) from tbl_bbs), #{title},#{password},#{writer},#{content},#{email},1)
  	</insert>
- 	
+ 	<select id="select_board" resultType="kr.hs.study.dto.boardDTO">
+ 	select * from tbl_bbs order by idx
+ 	</select>
+ 	<select id="read" resultType="kr.hs.study.dto.boardDTO">
+ 	select * from tbl_bbs where idx=#{idx}
+ 	</select>
  </mapper>      
  

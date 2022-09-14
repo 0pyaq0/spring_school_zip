@@ -19,7 +19,7 @@ public class boardServiceImpl implements boardService{
 	}
 
 	public List<boardDTO> selectAll() {
-		return null;
+		return dao.selectAll();
 	}
 
 	public void update(boardDTO dto) {
@@ -27,8 +27,7 @@ public class boardServiceImpl implements boardService{
 	}
 
 	public boardDTO read(int idx) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.read(idx);
 	}
 
 	public void delete(int idx) {

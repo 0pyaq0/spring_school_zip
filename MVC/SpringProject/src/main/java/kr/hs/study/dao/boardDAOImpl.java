@@ -19,7 +19,7 @@ public class boardDAOImpl implements boardDAO{
 	}
 
 	public List<boardDTO> selectAll() {
-		return null;
+		return sqlsession.selectList("board_mapper_xml.select_board");
 	}
 
 	public void update(boardDTO dto) {
@@ -27,7 +27,7 @@ public class boardDAOImpl implements boardDAO{
 	}
 
 	public boardDTO read(int idx) {
-		return null;
+		return sqlsession.selectOne("board_mapper_xml.read",idx);
 	}
 
 	public void delete(int idx) {

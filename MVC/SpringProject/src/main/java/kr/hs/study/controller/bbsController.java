@@ -1,7 +1,10 @@
 package kr.hs.study.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -27,7 +30,13 @@ public class bbsController {
 	@PostMapping("/board_register")
 	public String board_register(boardDTO dto) {
 		boardservice.insert(dto);
-		return "result";
+		return "redirect:/select";
 	}
 	
+	@GetMapping("/select")
+	public String select(Model model){
+		List<boardDTO> list=boardservice.selectAll();
+		model.addAttribute("list", list);
+		return "board/board_list";
+	}
 }
