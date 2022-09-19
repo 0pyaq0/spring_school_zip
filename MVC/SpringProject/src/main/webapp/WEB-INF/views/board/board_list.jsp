@@ -32,6 +32,7 @@
 		<td>${value.email}</td>
 		<td>${value.hit}</td>
 		<td>${value.regDate}</td>
+		<td><a href="select/update?idx=${value.idx}">수정</a> <a href="select/delete?idx=${value.idx }">삭제</a> </td>
 	</tr>
 	</c:forEach>
 	</tbody>

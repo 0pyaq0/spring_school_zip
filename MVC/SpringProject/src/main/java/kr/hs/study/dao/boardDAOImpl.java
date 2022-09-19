@@ -23,7 +23,7 @@ public class boardDAOImpl implements boardDAO{
 	}
 
 	public void update(boardDTO dto) {
-		
+		sqlsession.update("board_mapper_xml.update_board", dto);
 	}
 
 	public boardDTO read(int idx) {
@@ -31,7 +31,12 @@ public class boardDAOImpl implements boardDAO{
 	}
 
 	public void delete(int idx) {
-		
+		sqlsession.delete("board_mapper_xml.delete_board", idx);
+	}
+
+	public int hit(int idx) {
+		// TODO Auto-generated method stub
+		return sqlsession.update("board_mapper_xml.update_board", idx);
 	}
 
 }

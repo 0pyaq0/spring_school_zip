@@ -10,4 +10,5 @@ public interface boardDAO {
 	public void update(boardDTO dto);
 	public boardDTO read(int idx);
 	public void delete(int idx);
+	public int hit(int idx);
 }

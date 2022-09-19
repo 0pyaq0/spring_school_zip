@@ -23,7 +23,7 @@ public class boardServiceImpl implements boardService{
 	}
 
 	public void update(boardDTO dto) {
-		
+		dao.update(dto);
 	}
 
 	public boardDTO read(int idx) {
@@ -31,9 +31,14 @@ public class boardServiceImpl implements boardService{
 	}
 
 	public void delete(int idx) {
-		// TODO Auto-generated method stub
-		
+		dao.delete(idx);
 	}
+
+	public int hit(int idx) {
+		// TODO Auto-generated method stub
+		return dao.hit(idx);
+	}
+
 
 
 
