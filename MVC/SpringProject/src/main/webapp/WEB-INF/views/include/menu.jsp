@@ -14,6 +14,7 @@
 <a href="login">로그인</a> | 
 <a href="upload">파일업로드|</a>
 <a href="register">회원가입 로그인</a> |
-<a href="board">게시판</a>
+<a href="board">게시판</a> |
+<a href="shop">쇼핑몰</a> |
 </body>
 </html>

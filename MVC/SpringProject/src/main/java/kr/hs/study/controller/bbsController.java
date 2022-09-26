@@ -42,8 +42,8 @@ public class bbsController {
 	}
 	
 	@GetMapping("select/update")
-	public String update_form(Model model) {
-		list.setHit(list.getHit() + 1);
+	public String update_form(Model model, @RequestParam int idx) {
+		boardDTO list = boardservice.read(idx);
 		model.addAttribute("list", list);
 		return "board/update_form";
 	}
