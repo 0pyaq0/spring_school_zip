@@ -1,43 +1,47 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+   pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="EUC-KR">
-<title>상품 등록 페이지</title>
+<title>product add form</title>
+<script
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-	$(document).ready(function(){
-		$("#addBtn").click(function(){
-			var productName = $("#productName").val();
-			var productPrice = $("#productPrice").val();
-			var productDesc = $("#productDesc").val();
-			var productPhoto = $("#productPhoto").val();
-			
-			if(productName == "") {
-				alert("상품명을 입력해주세요");
-				productName.foucs();
-			} else if (productPrice == "") {
-				alert("상품 가격을 입력해주세요");
-				productPrice.focus();
-			} else if (productDesc == "") {
-				alert("상품 설명을 입력해주세요");
-				productDesc.focus();
-			} else if (productPhoto == "") {
-				alert("상품 사진을 입력해주세요");
-				productPhoto.focus();
-			}
-			document.form1.action = "${path}/shop/product/insert.do";
-			document.form1.submit();
-		});
-	});
-	
+$(function(){
+   $("#addBtn").click(function(){
+	   var productName = $("#productName").val();
+		var productPrice = $("#productPrice").val();
+		var productDesc = $("#productDesc").val();
+		var productPhoto = $("#productPhoto").val();
+
+      if(productName==""){
+         alert("상품명을 입력해주세요");
+         productName.focus();
+      }
+      else if(productPrice==""){
+         alert("상품 가격을 입력해주세요");
+         productPrice.focus();
+      }
+      else if(productDesc==""){
+         alert("상품 설명을 입력해주세요");
+         productDesc.focus();
+      }
+      document.myForm.action="insert_product";
+      document.myForm.submit();
+   });
+
+   $("#listBtn").click(function(){
+      location.href="list";
+   });
+})
 </script>
 </head>
 <body>
-<h1>상품 등록하기</h1>
-<form action="" id="form1" name="form1" enctype="multipart/form-data" method="post">
-		<table border="1">
+   <h1>상품 등록</h1>
+   <form id="myForm" name="myForm"
+      enctype="multipart/form-data" method="post" action="list">
+      <table border="1">
 			<tr>
 				<td>상품명</td>
 				<td><input type="text" name="productName" id="productName"></td>
@@ -57,11 +61,10 @@
 			<tr>
 				<td colspan="2" align="center">
 					<input type="button" value="등록" id="addBtn">
-					<input type="button" value="목록" onclick="location.href='${path}/shop/product/list.do';">
+					<input type="button" value="목록" id="listBtn">
 				</td>
 			</tr>
 		</table>
-	</form>
+   </form>
 </body>
-
 </html>

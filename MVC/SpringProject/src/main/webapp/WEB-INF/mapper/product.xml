@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="product">
+ 	<insert id="insert_product" parameterType="kr.hs.study.dto.productDTO">
+ 	   insert into product(idx,title,password,writer,content,email,hit) 
+ 	   values((select NVL(max(idx)+1,1) from tbl_bbs), #{title},#{password},#{writer},#{content},#{email},1)
+ 	</insert>
+ 	<select id="select_board" resultType="kr.hs.study.dto.boardDTO">
+ 	select * from tbl_bbs order by idx
+ 	</select>
+ 	<select id="read" resultType="kr.hs.study.dto.boardDTO">
+ 	select * from tbl_bbs where idx=#{idx}
+ 	</select>
+ 	<update id="update_board" parameterType="kr.hs.study.dto.boardDTO">
+ 	update tbl_bbs set title=#{title}, password=#{password}, writer=#{writer}, content=#{content}, email=#{email}, hit = #{hit} where idx=#{idx}
+ 	</update>
+ 	<delete id="delete_board" parameterType="kr.hs.study.dto.boardDTO">
+ 	delete from tbl_bbs where idx=#{idx}
+ 	</delete>
+ </mapper>      
+ 
