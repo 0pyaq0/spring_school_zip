@@ -10,7 +10,7 @@
 <script>
 $(function(){
    $("#addBtn").click(function(){
-	   var productName = $("#productName").val();
+	    var productName = $("#productName").val();
 		var productPrice = $("#productPrice").val();
 		var productDesc = $("#productDesc").val();
 		var productPhoto = $("#productPhoto").val();
@@ -40,7 +40,7 @@ $(function(){
 <body>
    <h1>상품 등록</h1>
    <form id="myForm" name="myForm"
-      enctype="multipart/form-data" method="post" action="list">
+      enctype="multipart/form-data" method="post">
       <table border="1">
 			<tr>
 				<td>상품명</td>

@@ -4,20 +4,19 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="product">
- 	<insert id="insert_product" parameterType="kr.hs.study.dto.productDTO">
- 	   insert into product(idx,title,password,writer,content,email,hit) 
- 	   values((select NVL(max(idx)+1,1) from tbl_bbs), #{title},#{password},#{writer},#{content},#{email},1)
+ 	<insert id="insert_data" parameterType="kr.hs.study.dto.productDTO">
+ 	   insert into product(productId,productName,productPrice,productDesc,productUrl) values(seq_product.nextval,#{productName},#{productPrice},#{productDesc},#{productUrl})
  	</insert>
- 	<select id="select_board" resultType="kr.hs.study.dto.boardDTO">
- 	select * from tbl_bbs order by idx
+ 	<select id="select_data" resultType="kr.hs.study.dto.productDTO">
+ 	select * from product order by productId
  	</select>
- 	<select id="read" resultType="kr.hs.study.dto.boardDTO">
- 	select * from tbl_bbs where idx=#{idx}
+ 	<select id="read" resultType="kr.hs.study.dto.productDTO">
+ 	select * from product where productId=#{productId}
  	</select>
- 	<update id="update_board" parameterType="kr.hs.study.dto.boardDTO">
+ 	<update id="update_product" parameterType="kr.hs.study.dto.boardDTO">
  	update tbl_bbs set title=#{title}, password=#{password}, writer=#{writer}, content=#{content}, email=#{email}, hit = #{hit} where idx=#{idx}
  	</update>
- 	<delete id="delete_board" parameterType="kr.hs.study.dto.boardDTO">
+ 	<delete id="delete_product" parameterType="kr.hs.study.dto.boardDTO">
  	delete from tbl_bbs where idx=#{idx}
  	</delete>
  </mapper>      
