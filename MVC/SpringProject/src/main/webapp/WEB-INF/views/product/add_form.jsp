@@ -61,7 +61,7 @@ $(function(){
 			<tr>
 				<td colspan="2" align="center">
 					<input type="button" value="등록" id="addBtn">
-					<input type="button" value="목록" id="listBtn">
+					<input type="button" value="메뉴" id="listBtn">
 				</td>
 			</tr>
 		</table>

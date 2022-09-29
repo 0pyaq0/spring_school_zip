@@ -13,11 +13,14 @@
  	<select id="read" resultType="kr.hs.study.dto.productDTO">
  	select * from product where productId=#{productId}
  	</select>
- 	<update id="update_product" parameterType="kr.hs.study.dto.boardDTO">
- 	update tbl_bbs set title=#{title}, password=#{password}, writer=#{writer}, content=#{content}, email=#{email}, hit = #{hit} where idx=#{idx}
+	<select id="detailProduct" resultType="kr.hs.study.dto.productDTO">
+		select productId, productName, productPrice, productDesc, productUrl from product where productId = #{productId}
+	</select>
+ 	<update id="update_product" parameterType="kr.hs.study.dto.productDTO">
+ 	update product set title=#{title}, password=#{password}, writer=#{writer}, content=#{content}, email=#{email}, hit = #{hit} where idx=#{idx}
  	</update>
- 	<delete id="delete_product" parameterType="kr.hs.study.dto.boardDTO">
- 	delete from tbl_bbs where idx=#{idx}
+ 	<delete id="delete_product" parameterType="kr.hs.study.dto.productDTO">
+ 	delete from product where productId=#{productId}
  	</delete>
  </mapper>      
  
